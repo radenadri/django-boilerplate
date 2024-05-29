@@ -1,6 +1,6 @@
 # Django + Inertia + Vue
 
-I'm learning Django and interested to integrate the [Inertia.js](https://inertiajs.com/) because i want to use [Vue.js][https://vuejs.org] as a view layer.
+I'm learning Django and interested to integrate the [Inertia.js](https://inertiajs.com/) because i want to use [Vue.js](https://vuejs.org) as a view layer.
 
 ## How to run
 
