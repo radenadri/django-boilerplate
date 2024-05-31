@@ -7,8 +7,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Inertia &hearts; Django</title>
-
-        {% vite_hmr_client %} {% vite_asset 'js/app.js' %}
+        {% vite_hmr_client %}
+        <link href="{% vite_asset_url 'css/index.css' %}" rel="stylesheet" />
+        {% vite_asset 'js/app.js' %}
     </head>
     <body>
         {% block inertia %} {% endblock %}
