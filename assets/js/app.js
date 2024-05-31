@@ -5,17 +5,17 @@ import { InertiaProgress } from '@inertiajs/progress'
 const pages = import.meta.glob('./pages/**/*.vue')
 
 document.addEventListener('DOMContentLoaded', () => {
-  InertiaProgress.init({ showSpinner: true })
+    InertiaProgress.init({ showSpinner: true })
 
-  createInertiaApp({
-    resolve: async name => {
-      const page = (await pages[`./pages/${name}.vue`]()).default
-      return page
-    },
-    setup({ el, App, props, plugin }) {
-      createApp({ render: () => h(App, props) })
-        .use(plugin)
-        .mount(el)
-    }
-  })
+    createInertiaApp({
+        resolve: async name => {
+            const page = (await pages[`./pages/${name}.vue`]()).default
+            return page
+        },
+        setup({ el, App, props, plugin }) {
+            createApp({ render: () => h(App, props) })
+                .use(plugin)
+                .mount(el)
+        }
+    })
 })

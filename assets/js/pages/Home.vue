@@ -1,11 +1,11 @@
 <script setup>
 defineProps({
-  title: String,
-  description: String
+    title: String,
+    description: String
 })
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
-  <p>{{ description }}</p>
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
 </template>
