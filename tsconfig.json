@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "types": [
+            "vite/client",
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./assets/js/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

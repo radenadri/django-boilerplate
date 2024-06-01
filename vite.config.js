@@ -1,12 +1,28 @@
-import { resolve } from 'path';
+import path, { resolve } from 'path'
+
+import { defineConfig } from "vite"
+
+import tailwind from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
 import vue from '@vitejs/plugin-vue'
 
-module.exports = {
+export default defineConfig({
+    root: resolve('./assets'),
+    base: '/static/',
+    css: {
+        postcss: {
+            plugins: [tailwind(), autoprefixer()],
+        },
+    },
     plugins: [
         vue(),
     ],
-    root: resolve('./assets'),
-    base: '/static/',
+    resolve: {
+        extensions: ['.js', '.ts', '.vue'],
+        alias: {
+            '@': path.resolve(__dirname, './assets/js'),
+        }
+    },
     server: {
         hmr: {
             host: 'localhost',
@@ -16,9 +32,6 @@ module.exports = {
             disableGlobbing: false,
         },
     },
-    resolve: {
-        extensions: ['.js', '.vue'],
-    },
     build: {
         target: 'es2015',
         assetsDir: '',
@@ -27,9 +40,8 @@ module.exports = {
         emptyOutDir: true,
         rollupOptions: {
             input: {
-                main: resolve('./assets/js/app.js'),
-                styles: resolve('./assets/css/index.css'),
+                main: resolve('./assets/js/app.ts'),
             },
         },
     },
-};
+});

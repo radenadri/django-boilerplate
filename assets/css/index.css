@@ -2,6 +2,163 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 3.9%;
+
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 0 0% 45.1%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 3.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 3.9%;
+
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+
+        --primary: 0 0% 9%;
+        --primary-foreground: 0 0% 98%;
+
+        --secondary: 0 0% 96.1%;
+        --secondary-foreground: 0 0% 9%;
+
+        --accent: 0 0% 96.1%;
+        --accent-foreground: 0 0% 9%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        --ring: 0 0% 3.9%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 0 0% 3.9%;
+        --foreground: 0 0% 98%;
+
+        --muted: 0 0% 14.9%;
+        --muted-foreground: 0 0% 63.9%;
+
+        --popover: 0 0% 3.9%;
+        --popover-foreground: 0 0% 98%;
+
+        --card: 0 0% 3.9%;
+        --card-foreground: 0 0% 98%;
+
+        --border: 0 0% 14.9%;
+        --input: 0 0% 14.9%;
+
+        --primary: 0 0% 98%;
+        --primary-foreground: 0 0% 9%;
+
+        --secondary: 0 0% 14.9%;
+        --secondary-foreground: 0 0% 98%;
+
+        --accent: 0 0% 14.9%;
+        --accent-foreground: 0 0% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+
+        --ring: 0 0% 83.1%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    /* Image */
+
+    img {
+        @apply object-cover h-auto max-w-full md:w-full;
+    }
+
+    /* Typography */
+
+    h1 {
+        @apply text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl;
+    }
+
+    h2 {
+        @apply pb-2 mt-10 text-3xl font-semibold tracking-tight transition-colors border-b scroll-m-20 first:mt-0;
+    }
+
+    h3 {
+        @apply mt-8 text-2xl font-semibold tracking-tight scroll-m-20;
+    }
+
+    h4 {
+        @apply text-xl font-semibold tracking-tight scroll-m-20;
+    }
+
+    h5 {
+        @apply text-lg font-medium tracking-tight scroll-m-20;
+    }
+
+    h6 {
+        @apply font-medium tracking-tight scroll-m-20;
+    }
+
+    p {
+        @apply leading-7 [&:not(:first-child)]:mt-6;
+    }
+
+    small {
+        @apply text-sm;
+    }
+
+    /* Code */
+
+    code {
+        @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+    }
+
+    /* Link */
+
+    a {
+        @apply font-medium underline text-primary underline-offset-4;
+    }
+
+    /* List */
+
+    ul {
+        @apply my-6 ml-6 list-disc [&>li]:mt-2;
+    }
+
+    /* Blockquote */
+
+    blockquote {
+        @apply pl-6 mt-6 italic border-l-2;
+    }
+
+    /* Table */
+
+    table {
+        @apply w-full;
+    }
+
+    table tr {
+        @apply p-0 m-0 border-t even:bg-muted;
+    }
+
+    table th {
+        @apply border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right;
+    }
+
+    table td {
+        @apply border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
+    }
+}
+
 @layer components {
     .debug {
         @apply border border-red-500;
@@ -24,7 +181,7 @@
     }
 
     .horizontal.center {
-        @apply justify-center items-center;
+        @apply items-center justify-center;
     }
 
     .vertical.center-v {
@@ -36,50 +193,26 @@
     }
 
     .vertical.center {
-        @apply justify-center items-center;
+        @apply items-center justify-center;
     }
 
     .space-between {
         @apply justify-between;
     }
-}
 
-/* Image */
+    .lead {
+        @apply text-xl text-muted-foreground;
+    }
 
-img {
-    @apply max-w-full h-auto object-cover md:w-full;
-}
+    .large {
+        @apply text-lg font-semibold;
+    }
 
-/* Typography */
+    .small {
+        @apply text-sm font-medium leading-none;
+    }
 
-h1 {
-    @apply text-5xl;
-}
-
-h2 {
-    @apply text-4xl;
-}
-
-h3 {
-    @apply text-3xl;
-}
-
-h4 {
-    @apply text-2xl;
-}
-
-h5 {
-    @apply text-xl;
-}
-
-h6 {
-    @apply text-lg;
-}
-
-p {
-    @apply text-base;
-}
-
-small {
-    @apply text-sm;
+    .muted {
+        @apply text-sm text-muted-foreground;
+    }
 }

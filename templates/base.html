@@ -8,8 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Inertia &hearts; Django</title>
         {% vite_hmr_client %}
-        <link href="{% vite_asset_url 'css/index.css' %}" rel="stylesheet" />
-        {% vite_asset 'js/app.js' %}
+        {% vite_asset 'js/app.ts' %}
     </head>
     <body>
         {% block inertia %} {% endblock %}
