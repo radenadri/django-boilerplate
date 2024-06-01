@@ -151,3 +151,7 @@ STATICFILES_DIRS = [
 
 # Inertia layout filename
 INERTIA_LAYOUT = 'base.html'
+
+# Django Inertia Configuration
+CSRF_HEADER_NAME = 'HTTP_X_XSRF_TOKEN'
+CSRF_COOKIE_NAME = 'XSRF-TOKEN'
