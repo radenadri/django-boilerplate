@@ -15,7 +15,7 @@ I'm learning Django and interested to integrate the [Inertia.js](https://inertia
 - Mac / Linux
 
 ```bash
-  source .benv/bin/activate
+  source .venv/bin/activate
 ```
 
 - Windows
