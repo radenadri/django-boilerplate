@@ -1,4 +1,4 @@
-# Django + Inertia + Vue
+# Django Boilerplate
 
 I'm learning Django and interested to integrate the [Inertia.js](https://inertiajs.com/) because i want to use [Vue.js](https://vuejs.org) as a view layer.
 
@@ -15,7 +15,7 @@ I'm learning Django and interested to integrate the [Inertia.js](https://inertia
 - Mac / Linux
 
 ```bash
-  source .benv/bin/activate
+  source .venv/bin/activate
 ```
 
 - Windows
