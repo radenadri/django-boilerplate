@@ -12,7 +12,7 @@ defineProps({
 
 <template>
     <section class="grid place-items-center h-[100dvh]">
-        <div class="max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div class="px-4 max-w-3xl sm:px-6 lg:px-8">
             <h1>
                 {{ title }}
             </h1>
