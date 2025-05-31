@@ -139,3 +139,6 @@ GitHub.sublime-settings
 
 # node
 node_modules/
+
+# Others
+.devdbrc
